@@ -1,0 +1,60 @@
+basePath: /api/v1/
+host: localhost:3000
+info:
+  contact: {}
+  description: This is a awesome web server.
+  license: {}
+  title: Higo Example API
+  version: "1.0"
+paths:
+  /ping/:
+    post:
+      consumes:
+      - application/json
+      description: 检查进程是否存活
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 状态检查
+  /user/login/:
+    post:
+      consumes:
+      - application/json
+      description: 用户登录接口
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 用户登录
+  /user/logout/:
+    delete:
+      consumes:
+      - application/json
+      description: 登出用户
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 用户登出
+  /user/me/:
+    get:
+      consumes:
+      - application/json
+      description: 获取用户详情
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 用户详情
+  /user/register/:
+    post:
+      consumes:
+      - application/json
+      description: 注册用户
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 用户注册
+swagger: "2.0"

@@ -1,0 +1,89 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a awesome web server.",
+        "title": "Higo Example API",
+        "contact": {},
+        "license": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/api/v1/",
+    "paths": {
+        "/ping/": {
+            "post": {
+                "description": "检查进程是否存活",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "状态检查",
+                "responses": {
+                    "200": {}
+                }
+            }
+        },
+        "/user/login/": {
+            "post": {
+                "description": "用户登录接口",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "用户登录",
+                "responses": {
+                    "200": {}
+                }
+            }
+        },
+        "/user/logout/": {
+            "delete": {
+                "description": "登出用户",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "用户登出",
+                "responses": {
+                    "200": {}
+                }
+            }
+        },
+        "/user/me/": {
+            "get": {
+                "description": "获取用户详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "用户详情",
+                "responses": {
+                    "200": {}
+                }
+            }
+        },
+        "/user/register/": {
+            "post": {
+                "description": "注册用户",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "用户注册",
+                "responses": {
+                    "200": {}
+                }
+            }
+        }
+    }
+}
