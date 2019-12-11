@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
         "description": "This is a awesome web server.",
-        "title": "Higo Example API",
+        "title": "higo Example API",
         "contact": {},
         "license": {},
         "version": "1.0"
@@ -35,6 +35,26 @@
                     "application/json"
                 ],
                 "summary": "用户登录",
+                "parameters": [
+                    {
+                        "description": "用户名",
+                        "name": "user_name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "密码",
+                        "name": "password",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {}
                 }
@@ -80,6 +100,44 @@
                     "application/json"
                 ],
                 "summary": "用户注册",
+                "parameters": [
+                    {
+                        "description": "昵称",
+                        "name": "nickname",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "用户名",
+                        "name": "user_name",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "密码",
+                        "name": "password",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "确认密码",
+                        "name": "password_confirm",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {}
                 }

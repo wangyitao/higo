@@ -7,6 +7,7 @@ import (
 	"higo/model"
 	"higo/util"
 
+	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
@@ -14,7 +15,7 @@ import (
 func Init() {
 	// 从本地读取环境变量
 	godotenv.Load()
-	
+
 	// 设置gin的模式
 	gin.SetMode(os.Getenv("GIN_MODE"))
 

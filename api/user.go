@@ -13,12 +13,16 @@ import (
 // @Description 注册用户
 // @Accept  json
 // @Produce  json
+// @Param nickname body string true "昵称"
+// @Param user_name body string true "用户名"
+// @Param password body string true "密码"
+// @Param password_confirm body string true "确认密码"
 // @Success 200
 // @Router /user/register/ [post]
 func UserRegister(c *gin.Context) {
-	var service service.UserRegisterService
-	if err := c.ShouldBind(&service); err == nil {
-		res := service.Register()
+	var myService service.UserRegisterService
+	if err := c.ShouldBind(&myService); err == nil {
+		res := myService.Register()
 		c.JSON(200, res)
 	} else {
 		c.JSON(200, ErrorResponse(err))
@@ -30,12 +34,14 @@ func UserRegister(c *gin.Context) {
 // @Description 用户登录接口
 // @Accept  json
 // @Produce  json
+// @Param user_name body string true "用户名"
+// @Param password body string true "密码"
 // @Success 200
 // @Router /user/login/ [post]
 func UserLogin(c *gin.Context) {
-	var service service.UserLoginService
-	if err := c.ShouldBind(&service); err == nil {
-		res := service.Login(c)
+	var myService service.UserLoginService
+	if err := c.ShouldBind(&myService); err == nil {
+		res := myService.Login(c)
 		c.JSON(200, res)
 	} else {
 		c.JSON(200, ErrorResponse(err))
