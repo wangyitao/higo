@@ -47,7 +47,7 @@ Higo: Simple Awesome Golang Web Service
 项目在启动的时候依赖以下环境变量，但是在也可以在项目根目录创建.env文件设置环境变量便于使用(建议开发环境使用)
 
 ```shell
-MYSQL_DSN="db_user:db_password@/db_name?charset=utf8&parseTime=True&loc=Local" # Mysql连接地址
+MYSQL_DSN="db_user:db_password@tcp(db_ip:port)/db_name?charset=utf8&parseTime=True&loc=Local" # Mysql连接地址
 REDIS_ADDR="127.0.0.1:6379" # Redis端口和地址
 REDIS_PW="" # Redis连接密码
 REDIS_DB="" # Redis库从0到10
